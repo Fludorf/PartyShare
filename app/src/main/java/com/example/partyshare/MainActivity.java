@@ -1,11 +1,16 @@
 package com.example.partyshare;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+
+import static android.text.TextUtils.replace;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
         button_qrcode    = (ImageButton) findViewById(R.id.button_qrcode);
         button_hostevent = (ImageButton) findViewById(R.id.button_hostevent);
 
+
         button_gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMainActivity();
+                setFragment(new StoriesFragment());
             }
         });
 
@@ -36,20 +42,16 @@ public class MainActivity extends AppCompatActivity {
         button_hostevent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openHostActivity();
+                setFragment(new HostEventFragment());
             }
         });
     }
 
-    private void openHostActivity() {
-        Intent intent = new Intent(this, HostActivity.class);
-        startActivity(intent);
-    }
-
-
-    private void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+    private void setFragment(Fragment Fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.flFragment,Fragment);
+        fragmentTransaction.commit();
     }
 
 

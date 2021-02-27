@@ -49,28 +49,13 @@
         android:src="@drawable/organize"
         />
 
-    <TextView
-        android:id="@+id/story1"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@color/teal_200"
-        android:text="PLACEHOLDER FOR STORY!!PLACEHOLDER FOR STORY!!"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button_gallery" />
+    <FrameLayout
 
-    <TextView
-        android:id="@+id/story2"
+        android:id="@+id/flFragment"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@color/teal_200"
-        android:text="PLACEHOLDER FOR STORY!!PLACEHOLDER FOR STORY!!"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/story1" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_gallery"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="40dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
