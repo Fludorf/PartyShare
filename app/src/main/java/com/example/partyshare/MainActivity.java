@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         button_gallery   = (ImageButton) findViewById(R.id.button_gallery);
         button_qrcode    = (ImageButton) findViewById(R.id.button_qrcode);
         button_hostevent = (ImageButton) findViewById(R.id.button_hostevent);
-
+        setFragment(new StoriesFragment());
 
         button_gallery.setOnClickListener(new View.OnClickListener() {
             @Override
