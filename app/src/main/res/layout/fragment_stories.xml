@@ -10,7 +10,7 @@
         android:id="@+id/story1"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@color/teal_200"
+        android:background="@drawable/roundstyle"
         android:text="PLACEHOLDER FOR STORY!!PLACEHOLDER FOR STORY!!"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/story2"
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="40dp"
-        android:background="@color/teal_200"
+        android:background="@drawable/roundstyle"
         android:text="PLACEHOLDER FOR STORY!!PLACEHOLDER FOR STORY!!"
         android:textSize="30sp"
         app:layout_constraintTop_toBottomOf="@id/story1" />
